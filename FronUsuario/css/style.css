@@ -1,0 +1,58 @@
+/* Parte para celular */
+
+input, button{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.imglogin{
+    width: 100%;
+}
+
+.fotouser{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.conteudo {
+    margin-top: 15px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.card img {
+    height: 350px;
+}
+
+.livro {
+    text-decoration: line-through;
+}
+
+.lado {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.precoatual {
+    position: absolute;
+    color: #f83f3f;
+    font-size: 1.5em;
+    border-bottom: solid 1px #f83f3f;
+    top: 20px;
+    right: -150px;
+    cursor: pointer;
+    transition: ease .5s;
+}
+
+.precoatual:hover{
+    font-size: 1.7em;
+    transition: ease .5s;
+}
