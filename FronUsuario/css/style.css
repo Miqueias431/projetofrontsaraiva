@@ -29,6 +29,7 @@ input, button{
 
 .card img {
     height: 350px;
+    width: auto;
 }
 
 .livro {
@@ -37,22 +38,42 @@ input, button{
 
 .lado {
     display: flex;
-    justify-content: center;
+
     flex-wrap: wrap;
 }
 
 .precoatual {
-    position: absolute;
     color: #f83f3f;
-    font-size: 1.5em;
+    font-size: 1.3em;
     border-bottom: solid 1px #f83f3f;
-    top: 20px;
-    right: -150px;
+    width: 80px;
     cursor: pointer;
     transition: ease .5s;
 }
 
 .precoatual:hover{
-    font-size: 1.7em;
+    font-size: 1.4em;
+    width: 86px;
     transition: ease .5s;
+}
+
+#imgPesquisa {
+    height: 250px;
+    width: auto;
+}
+
+.bordaCard {
+    border: none;
+}
+
+.carrinho img{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.carrinho {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
 }
