@@ -66,14 +66,46 @@ input, button{
     border: none;
 }
 
-.carrinho img{
+/*  PARTE DO CARRINHO */
+
+.carrinho {
+    display: flex;
+    flex-direction: column;
+    border: grey solid 0.5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-left: -45px;
+    max-width: 1065px;
+}
+
+.cartao {
+    display: flex;
+    flex-direction: row;
+    border:  none;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 200px;
+    width: 500px;
+}
+ 
+.cartao img {
+    height: 200px;
+    width: auto;
+}
+
+.carrinhobtn img{
     cursor: pointer;
     width: 40px;
     height: 40px;
 }
 
-.carrinho {
+.carrinhobtn {
     cursor: pointer;
     color: black;
     text-decoration: none;
+}
+
+.totallivro {
+    color: #f83f3f;
 }

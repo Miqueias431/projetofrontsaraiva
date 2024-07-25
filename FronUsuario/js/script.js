@@ -128,7 +128,7 @@ function detalhes() {
                             <h6 class="card-text">Autor: ${rs.autor}</h6>
                             <p class="card-text">${rs.sinopse}</p>
                             <p class="card-text precoatual">R$ ${rs.precodesconto < 1 ? rs.precoatual : rs.precodesconto}</p>
-                            <a href=carrinho.html?idlivro=${rs.idtitulo}" class="carrinho"><img src=img/carrinho.png>Adicionar ao carrinho</a>
+                            <a href=carrinho.html?idlivro=${rs.idtitulo}" class="carrinhobtn"><img src=img/carrinho.png>Adicionar ao carrinho</a>
                         </div>
                     </div>
                 </div>`
@@ -168,6 +168,35 @@ function buscar() {
                 </div>`
 
                 conteudo.innerHTML += card
+            })
+        })
+        .catch((error) => console.error(`Erro na api ${error}`))
+}
+
+function carrinho() {
+    let id_url = window.location.search.split('=')
+
+    const carrinho = document.querySelector(".carrinho")
+
+    fetch("http://127.0.0.1:9002/api/v1/carrinho/listar/" + id_url[1])
+    .then((res) => res.json())
+        .then((dados) => {
+            dados.payload.map((rs) => {
+                let card = `
+        <div class="container carrinhot">
+            <div class=" card cartao">
+                <img src=${rs.fotos1} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5>${rs.nometitulo}</h5>
+                    <p class="card-text">Por ${rs.autor}</p>
+                    <p>${rs.quantidade}</p>
+                    <p class="totallivro">${rs.total}</p>  
+                </div>
+                
+            </div>
+            <hr>
+        </div>`
+                carrinho.innerHTML += card
             })
         })
         .catch((error) => console.error(`Erro na api ${error}`))
