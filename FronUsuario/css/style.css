@@ -66,6 +66,7 @@ input, button{
     border: none;
 }
 
+
 /*  PARTE DO CARRINHO */
 
 .carrinho {
@@ -79,7 +80,7 @@ input, button{
     max-width: 1065px;
 }
 
-.cartao {
+.cartaoCa {
     display: flex;
     flex-direction: row;
     border:  none;
@@ -89,7 +90,7 @@ input, button{
     width: 500px;
 }
  
-.cartao img {
+.cartaoCa img {
     height: 200px;
     width: auto;
 }

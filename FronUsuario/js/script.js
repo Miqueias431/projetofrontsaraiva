@@ -184,7 +184,7 @@ function carrinho() {
             dados.payload.map((rs) => {
                 let card = `
         <div class="container carrinhot">
-            <div class=" card cartao">
+            <div class=" card cartaoCa">
                 <img src=${rs.fotos1} class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5>${rs.nometitulo}</h5>
